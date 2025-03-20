@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class collectioncontroller : MonoBehaviour
 {
-
-    [SerializeField]
-    private int collectables = 0;
-   
+    public GameManagerScript gameManagerScript;
+    
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Collectable"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collectables++;
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            Debug.Log("Destroying child");
+            gameManagerScript.NextChild();
         }
     }
+
+    
 }
