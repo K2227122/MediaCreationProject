@@ -16,11 +16,15 @@ public class GameManagerScript : MonoBehaviour
 
     private int cameranum = 0;
     #endregion
+
+    [SerializeField] private GameObject endingStuff;
+    [SerializeField] private GameObject[] otherSprits = new GameObject[5];
     private void Start()
     {
         Activecollectable();
         cutscenescript.SetCusceneCamera(cutsceneCameras[cameranum]);
         cutscenescript.SetAnimator(animator[cameranum]);
+        endingStuff.SetActive(false);
     }
 
     private void Update()
@@ -32,7 +36,11 @@ public class GameManagerScript : MonoBehaviour
     {
         if (Collectables.transform.childCount == 1)
         {
-            Debug.Log("You did it!!!!!"); // call final animation
+            endingStuff.SetActive(true);
+            foreach(GameObject spirit in otherSprits)
+            {
+                spirit.SetActive(false);
+            }
         }
         else{Collectables.transform.GetChild(childnum).gameObject.SetActive(true);Debug.Log(Collectables.transform.GetChild(childnum).gameObject);}
         
