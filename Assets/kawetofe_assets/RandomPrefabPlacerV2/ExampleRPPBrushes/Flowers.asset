@@ -38,9 +38,31 @@ MonoBehaviour:
     maxSlopeAngle: 45
   - allowedLayers:
       serializedVersion: 2
-      m_Bits: 311
+      m_Bits: 55
     prefab: {fileID: 1775142227453386, guid: dabc3c370470e2b4a8b0235afd00c42c, type: 3}
     possibility: 0.89
+    scaleMin: 0.8
+    scaleMax: 1.2
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 1, y: 0, z: 1}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 2594766243793620232, guid: 4d1f930728eb81f499eefd1f6d4db221, type: 3}
+    possibility: 0.8
+    scaleMin: 0.8
+    scaleMax: 1.2
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 1, y: 0, z: 1}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 5206183479118557810, guid: 96d41c598e0118d4e8684be3e2d7effb, type: 3}
+    possibility: 0.8
     scaleMin: 0.8
     scaleMax: 1.2
     placementOffset: {x: 0, y: 0, z: 0}
