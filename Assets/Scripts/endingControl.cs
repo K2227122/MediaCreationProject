@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using Unity.Cinemachine;
+using UnityEngine.Playables;
 
 public class endingControl : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class endingControl : MonoBehaviour
 
     private float m_Time = 0f;
     [SerializeField] private float AudioTime = 17;
+
+    [SerializeField] private PlayableDirector cutsceneDirector;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,6 +51,7 @@ public class endingControl : MonoBehaviour
             other.gameObject.GetComponent<FirstPersonController>().enableHeadBob = false;
             m_IsPlaying = true;
             m_Time = AudioTime;
+            cutsceneDirector.Play();
         }
 
     }
